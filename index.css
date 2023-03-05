@@ -125,6 +125,11 @@ article {
     font-family: sans-serif;
 }
 
+.productos select {
+    border: none;
+    background: white;
+}
+
 .ordenar {
     width: 100%;
     border-top: 1px solid rgb(230, 230, 230);
@@ -132,6 +137,11 @@ article {
     text-align: center;
     padding: 1rem 0;
     font-family: sans-serif;
+}
+
+.ordenar select {
+    border: none;
+    background: white;
 }
 
 .cards {
@@ -168,6 +178,16 @@ article {
     width: 100%;
 }
 
+.svgDiv {
+    overflow: visible;
+    position: relative;
+    height: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: end;
+    padding-right: 5px;
+}
+
 .item-card-name {
     max-width: 80%;
     text-align: center;
@@ -181,6 +201,8 @@ article {
     color: grey;
     padding-top: 0.5rem;
 }
+
+
 
 footer {
     display: flex;
