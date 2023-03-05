@@ -32,6 +32,12 @@
 
   /* CSS Implementation below */
 
+body {
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+}
+
   /* header + nav */
 
 nav {
@@ -39,21 +45,29 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    
+    padding: 1rem;
 }
 
 .nav1 {
     display: flex;
+    width: 60%;
+    padding-left: 5%;
 }
 
 .nav2 {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    width: 40%;
+    
 }
 
 /* article */
+
+article {
+    padding: 1rem;
+}
 
 .result {
     display: flex;
@@ -64,6 +78,8 @@ nav {
 
 .result h2 {
     text-align: center;
+    max-width: 50%;
+    line-height: 1.1;
 }
 
 .desplegables {
@@ -73,21 +89,69 @@ nav {
     align-items: center;
 }
 
-.items {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    
+.productos {
+    width: 100%;
+    border-top: 1px solid rgb(230, 230, 230);
+    border-bottom: 1px solid rgb(230, 230, 230);
+    border-right: 1px solid rgb(230, 230, 230);
+    text-align: center;
 }
 
-.items img {
-    width: 80%;
+.ordenar {
+    width: 100%;
+    border-top: 1px solid rgb(230, 230, 230);
+    border-bottom: 1px solid rgb(230, 230, 230);
+    text-align: center;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: minmax(100px, 220px) minmax(100px, 220px);
+    justify-content: center;
+    gap: 1rem;
+}
+
+@media screen and (min-width:768px) {
+    .cards {
+        grid-template-columns: repeat(3, minmax(100px, 250px));
+    }
+}
+
+@media screen and (min-width:1052px) {
+    .cards {
+        grid-template-columns: repeat(4, minmax(100px, 250px));
+    }
+}
+
+.cards img {
+    width: 100%;
     height: auto;
+}
+
+.item-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.item-card-name {
+    max-width: 80%;
+    text-align: center;
+    line-height: 1.25;
+}
+
+.item-card-price {
+    text-align: center;
+    color: grey;
 }
 
 footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
+    padding: 1rem 15%;
 }
 
