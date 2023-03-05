@@ -45,28 +45,47 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 1rem 0.5rem;
 }
 
 .nav1 {
     display: flex;
     width: 60%;
-    padding-left: 5%;
+    /* padding-left: 5%; */
+    border-bottom: 1px solid rgb(240, 240, 240);
+    padding: 1rem 0 1rem 5%;
 }
 
 .nav2 {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    width: 40%;
-    
+    width: 20%;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    border-left: 1px solid rgb(240, 240, 240);
+    padding: 1rem 0;
 }
+
+.nav3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    border-left: 1px solid rgb(240, 240, 240);
+    padding: 1rem 0 1rem;
+}
+
+/* .nav2 i {
+    border: 1px solid rgb(240, 240, 240);
+} */
 
 /* article */
 
 article {
-    padding: 1rem;
+    padding: 0.5rem 1rem;
 }
 
 .result {
@@ -76,10 +95,16 @@ article {
     align-items: center;
 }
 
+.result p {
+    padding-bottom: 0.5rem;
+}
+
 .result h2 {
     text-align: center;
-    max-width: 50%;
+    max-width: 60%;
     line-height: 1.1;
+    padding-bottom: 1rem;
+    font-family: sans-serif;
 }
 
 .desplegables {
@@ -95,6 +120,9 @@ article {
     border-bottom: 1px solid rgb(230, 230, 230);
     border-right: 1px solid rgb(230, 230, 230);
     text-align: center;
+    padding: 1rem 0;
+    font-weight: 800;
+    font-family: sans-serif;
 }
 
 .ordenar {
@@ -102,6 +130,8 @@ article {
     border-top: 1px solid rgb(230, 230, 230);
     border-bottom: 1px solid rgb(230, 230, 230);
     text-align: center;
+    padding: 1rem 0;
+    font-family: sans-serif;
 }
 
 .cards {
@@ -109,6 +139,8 @@ article {
     grid-template-columns: minmax(100px, 220px) minmax(100px, 220px);
     justify-content: center;
     gap: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
 }
 
 @media screen and (min-width:768px) {
@@ -119,7 +151,7 @@ article {
 
 @media screen and (min-width:1052px) {
     .cards {
-        grid-template-columns: repeat(4, minmax(100px, 250px));
+        grid-template-columns: repeat(4, minmax(100px, 270px));
     }
 }
 
@@ -139,12 +171,15 @@ article {
 .item-card-name {
     max-width: 80%;
     text-align: center;
-    line-height: 1.25;
+    line-height: 1.1;
+    padding-top: 0.5rem;
+    font-size: 1.25rem;
 }
 
 .item-card-price {
     text-align: center;
     color: grey;
+    padding-top: 0.5rem;
 }
 
 footer {
@@ -153,5 +188,11 @@ footer {
     justify-content: space-around;
     align-items: center;
     padding: 1rem 15%;
+    border-top: 1px solid rgb(240, 240, 240);
+    max-width: 500px;
+    margin: 0 auto;
 }
 
+footer p:not(:first-child) {
+    color: gray
+}
